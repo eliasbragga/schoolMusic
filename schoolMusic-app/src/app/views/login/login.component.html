@@ -1,0 +1,16 @@
+<div class="login">
+    <p>Fazer login</p>  
+    <div>
+        <app-input 
+        typeIput="text" 
+        title="CPF" 
+        (inputTextEvent)="getLogin($event)"
+        />
+        <app-input 
+        typeInput="password" 
+        title="Password" 
+        (inputTextEvent)="getPassword($event)"
+        />
+    </div>
+    <app-button title="Fazer Login" (eventClick)="login()"></app-button>
+</div>

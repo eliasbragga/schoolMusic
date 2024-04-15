@@ -1,0 +1,11 @@
+<div>
+    <mat-form-field appearance="outline">
+      <mat-label>{{title}}</mat-label>
+      <input 
+        [type]="typeInput"
+        (input)="emmitEvent($event)" 
+        [(ngModel)]="inputValue"
+        matInput 
+        >
+  </mat-form-field>
+</div>

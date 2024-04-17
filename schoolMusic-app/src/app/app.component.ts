@@ -6,6 +6,11 @@ import { ContextService } from './service/context.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  implements OnInit {
+  links = [
+    {name: 'Comece por aqui'},
+    {name: 'Trilhas'},
+    {name: 'Suporte'}
+  ];
   loggedIn: string | null = ''
   constructor(
     private contextService: ContextService,

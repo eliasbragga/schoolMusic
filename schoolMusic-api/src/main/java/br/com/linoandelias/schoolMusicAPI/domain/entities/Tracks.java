@@ -15,7 +15,7 @@ import java.util.UUID;
 public class Tracks {
 
     @Id
-    private Long idTracks;
+    private String idTracks;
     private StudyTrack name;
     private int duration;
     private Videos content;

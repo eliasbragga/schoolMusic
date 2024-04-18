@@ -5,5 +5,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.UUID;
 
-public interface TracksRepositorys extends MongoRepository<Tracks, Long> {
+public interface TracksRepositorys extends MongoRepository<Tracks, String> {
 }

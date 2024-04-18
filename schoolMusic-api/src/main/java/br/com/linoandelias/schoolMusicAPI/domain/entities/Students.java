@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Students {
 
     @Id
-    private Long id;
+    private String id;
     private String name;
     private String password;
     private StudyTrack studyTrack;

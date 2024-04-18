@@ -48,7 +48,7 @@ public class StudentsController {
             @ApiResponse(responseCode = "200", description = "Returned students by ID successful.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Students.class ))),
             @ApiResponse(responseCode = "404", description = "Resource not found", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Students.class)))})
     @GetMapping("/{id}")
-    public ResponseEntity <Optional<Students>> findByID(@PathVariable Long id){
+    public ResponseEntity <Optional<Students>> findByID(@PathVariable String id){
          Optional <Students> ts = service.getByID(id);
         return ResponseEntity.status(HttpStatus.FOUND).body(ts);
     }

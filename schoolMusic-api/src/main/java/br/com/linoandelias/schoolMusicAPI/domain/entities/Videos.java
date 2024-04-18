@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Videos {
 
     @Id
-    private Long id;
+    private String id;
 
     private Boolean watched;
 

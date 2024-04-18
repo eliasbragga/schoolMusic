@@ -26,7 +26,7 @@ public class StudentsService {
     }
 
     //GET BY ID
-    public Optional <Students> getByID(Long id){
+    public Optional <Students> getByID(String id){
         return repository.findById(id);
     }
 

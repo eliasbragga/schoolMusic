@@ -47,9 +47,9 @@ public class StudentsServiceTest {
 
     @Test
     public void getStudent_ByExistingID_returnsStudents(){
-        when(service.getByID(1L)).thenReturn(Optional.of(students));
+        when(service.getByID(students.getId())).thenReturn(Optional.of(students));
 
-        Optional<Students> sut = service.getByID(1L);
+        Optional<Students> sut = service.getByID(students.getId());
 
         assertThat(sut.get()).isEqualTo(students);
     }

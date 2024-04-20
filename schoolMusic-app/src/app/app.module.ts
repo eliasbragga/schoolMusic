@@ -9,11 +9,13 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { InputComponent } from './components/input/input.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
     
   ],
   imports: [

@@ -1,0 +1,10 @@
+<header class="header">
+  <div class="logo">
+    <img src="../../../assets/logo.png" alt="Logo" title="logo">
+  </div>
+  <ul class="links">
+    <li *ngFor="let link of links" [ngClass]="link.space ? 'space' : ''">
+      {{ link.name }}
+    </li>
+  </ul>
+</header>

@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px 70px;
+  color: #868686;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .links {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+      color: #868686;
+      text-decoration: none;
+      margin-left: 50px;
+      cursor: pointer;
+
+    }
+
+    .space {
+      width: 60%;
+    }
+  }
+}

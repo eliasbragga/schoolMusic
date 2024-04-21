@@ -1,9 +1,7 @@
 @import '../styles.scss';
 
-div {   
+.container {   
     background-color: $primary-color;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 2% 3% 0px;
 }

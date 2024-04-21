@@ -15,7 +15,7 @@ export class HeaderComponent {
     { space: true },
     { name: 'Comece por aqui', routerPath:'comece-por-aqui' },
     { name: 'Trilhas', routerPath:'trilhas' },
-    { name: 'Suporte', routerPath:'suport' }
+    { name: 'Suporte', routerPath:'suporte' }
   ];
 
   constructor(

@@ -9,11 +9,15 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { InputComponent } from './components/input/input.component';
 import { HeaderComponent } from './components/header/header.component';
+import { StartHereComponent } from './views/start-here/start-here.component';
+import { LearningPathsComponent } from './/views/learning-paths/learning-paths.component';
+import { SupportComponent } from './views/support/support.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,9 @@ import { HeaderComponent } from './components/header/header.component';
     InputComponent,
     HomeComponent,
     HeaderComponent,
+    StartHereComponent,
+    LearningPathsComponent,
+    SupportComponent,
   ],  
   providers: [],
   bootstrap: [AppComponent]

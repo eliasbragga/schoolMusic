@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor,NgClass } from '@angular/common';
+import { ContextService } from '../../service/context.service';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +11,18 @@ import { NgFor,NgClass } from '@angular/common';
 })
 export class HeaderComponent {
   links = [
-    { name: 'Inicio' },
+    { name: 'Inicio', routerPath:'inicio' },
     { space: true },
-    { name: 'Comece por aqui' },
-    { name: 'Trilhas' },
-    { name: 'Suporte' }
+    { name: 'Comece por aqui', routerPath:'comece-por-aqui' },
+    { name: 'Trilhas', routerPath:'trilhas' },
+    { name: 'Suporte', routerPath:'suport' }
   ];
+
+  constructor(
+    private contextService: ContextService
+  ){}
+
+  redirectRoute(route?: string) {
+    this.contextService.redirectRoute(route)
+  }
 }

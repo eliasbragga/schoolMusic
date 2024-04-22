@@ -17,7 +17,7 @@ export class ContextService {
     private router: Router
   ) {}
 
-  redirectRoute(rota: string) {
+  redirectRoute(rota?: string) {
     this.router.navigate([`${rota}`]);
   }
 

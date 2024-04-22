@@ -32,7 +32,7 @@ import { SupportComponent } from './views/support/support.component';
     InputComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
     StartHereComponent,
     LearningPathsComponent,
     SupportComponent,

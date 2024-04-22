@@ -10,11 +10,13 @@ import { RouterModule } from '@angular/router';
 import { InputComponent } from './components/input/input.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InformationComponent } from './information/information.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    InformationComponent,
   ],
   imports: [
     BrowserModule,

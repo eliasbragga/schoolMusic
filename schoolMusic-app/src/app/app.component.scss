@@ -11,11 +11,16 @@
         padding: 2% 3% 0px;
     }
 
-    router-outlet {
+    .app-information {
         grid-row: 2;
+    }
+    
+
+    router-outlet {
+        grid-row: 3;
     }
 
     app-footer {
-        grid-row: 3;
+        grid-row: 4;
     }
 }

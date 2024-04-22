@@ -1,0 +1,81 @@
+@import '../../../styles.scss';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    color: $item-menu-color;
+    height: 45%;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $item-menu-color;
+        border-bottom: 1px solid $item-menu-color;
+        margin-bottom: 1rem;
+
+        align-items: center;
+        height: max-content;
+
+        .link_container {
+            display: flex;
+            min-height: 100% !important;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            border-left: 0.5px solid $item-menu-color;
+            padding: 0 2rem;
+            min-height: 100% !important;
+
+
+            span {
+                text-decoration: none;
+                cursor: pointer;
+                padding: 0 2rem;
+                width: 100%;
+            }
+        }
+    }
+
+    .about {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 1rem;
+        flex-direction: column;
+        width: 30%;
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .sub_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+        padding: 0 3rem 0.5rem 3rem;
+    }
+
+    .social {
+        display: flex;
+        gap: 1rem;
+
+        .fa-brands {
+            font-size: 1.5rem;
+        }
+    }
+}

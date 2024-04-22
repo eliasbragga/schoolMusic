@@ -1,1 +1,23 @@
-<p>footer works!</p>
+<div class="footer">
+    <div class="content">
+        <div class="about">
+            <img src="../../../assets/logo.png" alt="logo">
+            <h2>Plataforma de <br> aprendizado musical</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div class="link_container">
+            <div class="links" *ngFor="let link of links"> 
+                <span>{{ link.name }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="sub_content">
+        <p>Copyright © 2010-2024 Freepik Company S.L. All rights reserved.</p>
+        <div class="social">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+        </div>
+    </div>
+</div>

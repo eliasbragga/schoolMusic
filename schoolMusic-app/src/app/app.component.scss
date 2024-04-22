@@ -1,7 +1,21 @@
 @import '../styles.scss';
 
-.container {   
+.container {
     background-color: $primary-color;
-    height: 100vh;
-    padding: 2% 3% 0px;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+
+    app-header {
+        grid-row: 1;
+        padding: 2% 3% 0px;
+    }
+
+    router-outlet {
+        grid-row: 2;
+    }
+
+    app-footer {
+        grid-row: 3;
+    }
 }

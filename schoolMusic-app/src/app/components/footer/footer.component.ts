@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { ContextService } from '../../service/context.service';
 
 @Component({
@@ -7,22 +7,29 @@ import { ContextService } from '../../service/context.service';
   standalone: true,
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
-  imports: [NgFor]
+  imports: [NgFor, NgClass]
 })
 export class FooterComponent {
   links = [
-    { name: 'Inicio', routePath: 'inicio' },
-    { name: 'Comece por aqui', routePath: 'comece-por-aqui' },
-    { name: 'Trilhas', routePath: 'trilhas' },
-    { name: 'Suporte', routePath: 'suporte'}
+    { name: 'Inicio', routePath: 'inicio', selected: true },
+    { name: 'Comece por aqui', routePath: 'comece-por-aqui', selected: false },
+    { name: 'Trilhas', routePath: 'trilhas', selected: false },
+    { name: 'Suporte', routePath: 'suporte', selected: false}
   ];
 
   constructor(
     private contextService: ContextService
   ) {}
 
-  redirectRoute(route?: string) {
+  selectLink(linkName: string) {
+    const indexLink = this.links.findIndex(link => link.name === linkName)
+    this.links.forEach(link => link.selected = false)
+    if(indexLink !== -1) this.links[indexLink].selected = true
+  }
+
+  redirectRoute(route: string, link: string) {
     this.contextService.redirectRoute(route)
+    this.selectLink(link)
   }
 
 }

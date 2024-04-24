@@ -13,11 +13,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { StartHereComponent } from './views/start-here/start-here.component';
 import { LearningPathsComponent } from './/views/learning-paths/learning-paths.component';
 import { SupportComponent } from './views/support/support.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CardComponent,
    
   ],
   imports: [
@@ -32,7 +34,7 @@ import { SupportComponent } from './views/support/support.component';
     InputComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
     StartHereComponent,
     LearningPathsComponent,
     SupportComponent,

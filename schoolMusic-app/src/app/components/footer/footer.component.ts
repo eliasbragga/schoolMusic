@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { ContextService } from '../../service/context.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,10 +11,18 @@ import { NgFor } from '@angular/common';
 })
 export class FooterComponent {
   links = [
-    { name: 'Inicio' },
-    { name: 'Comece por aqui' },
-    { name: 'Trilhas' },
-    { name: 'Suporte' }
+    { name: 'Inicio', routePath: 'inicio' },
+    { name: 'Comece por aqui', routePath: 'comece-por-aqui' },
+    { name: 'Trilhas', routePath: 'trilhas' },
+    { name: 'Suporte', routePath: 'suporte'}
   ];
+
+  constructor(
+    private contextService: ContextService
+  ) {}
+
+  redirectRoute(route?: string) {
+    this.contextService.redirectRoute(route)
+  }
 
 }

@@ -6,7 +6,6 @@ import { StartHereComponent } from './views/start-here/start-here.component';
 import { LearningPathsComponent } from './views/learning-paths/learning-paths.component';
 import { SupportComponent } from './views/support/support.component';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },

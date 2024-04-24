@@ -1,0 +1,84 @@
+@import '../../../styles.scss';
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .information {
+        width: 50%;
+        height: 50%;
+
+        h2 {
+            font-size: 4rem;
+            color: $item-menu-color;
+        }
+
+        span {
+            color:  #E84A33;
+        }
+    }
+
+    .learn {
+        width: 20%;
+        display: flex;
+        text-align: end;
+        flex-direction: column;
+
+        h2 {
+            font-size: 1.7rem;
+            padding: 0 1.7rem 1rem 1.7rem;
+            color: $item-menu-color;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .active {
+                background-color: #E84A33;
+                color: black;
+            }
+
+            .off {
+                background-color: $card-home-box;
+                color: $item-menu-color;
+            }
+
+            .box {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem;
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                padding: 0;
+                font-weight: 400;
+            }
+
+            hr {
+                border: 0;
+                height: 1px;
+                width: 100%;
+                background-color: $item-menu-color;
+            }
+
+            .fa-solid {
+                font-size: 2rem;
+                margin-left: 0.5rem;
+                color: $item-menu-color;
+            }
+
+        }
+
+        .content,
+        .box {
+            display: flex;
+        }
+    }
+}

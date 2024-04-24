@@ -19,8 +19,7 @@ import { CardComponent } from './components/card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
-   
+    
   ],
   imports: [
     BrowserModule,
@@ -38,6 +37,7 @@ import { CardComponent } from './components/card/card.component';
     StartHereComponent,
     LearningPathsComponent,
     SupportComponent,
+    CardComponent,
   ],  
   providers: [],
   bootstrap: [AppComponent]

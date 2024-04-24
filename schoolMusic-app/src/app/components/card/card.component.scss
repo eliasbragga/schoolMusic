@@ -1,0 +1,27 @@
+@import '../../../styles.scss';
+
+.card_container {
+    width: 90%;
+    max-width: 250px;
+
+    .content {
+        width: 100%;
+
+        img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            height: auto;
+        }
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.5rem;
+        border-radius: 0 0 10px 10px;
+        padding: 1rem 0;
+        border: none;
+        color: $item-menu-color;
+        background-color: $card-home-box;
+        cursor: pointer;
+    }
+}

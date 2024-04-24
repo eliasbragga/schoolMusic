@@ -15,7 +15,7 @@
         }
 
         span {
-            color:  #E84A33;
+            color: #E84A33;
         }
     }
 
@@ -80,5 +80,20 @@
         .box {
             display: flex;
         }
+    }
+}
+
+.courses {
+    margin: 5rem 0  ;
+
+    h2 {
+        font-size: 2rem;
+        padding: 0 1.7rem 1rem 0 ;
+        color: $item-menu-color;
+    }
+
+    hr {
+        width: 20%;
+        margin-bottom: 3rem;
     }
 }

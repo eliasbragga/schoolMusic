@@ -1,13 +1,14 @@
 import { Component, OnInit} from '@angular/core';
 import { ContextService } from '../../service/context.service';
-import { HeaderComponent } from '../../components/header/header.component';
+import { CardComponent } from '../../components/card/card.component';
+
 
 @Component({
   standalone: true, 
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [HeaderComponent]
+  imports: [CardComponent]
 })  
 export class HomeComponent{
   numeroAtual?: number;

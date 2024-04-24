@@ -8,7 +8,7 @@
                 took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
         <div class="link_container">
-            <div class="links" *ngFor="let link of links" (click)="redirectRoute(link.routePath, link.name)"  [ngClass]="link.selected ? 'item_selected' : ''"> 
+            <div class="links" *ngFor="let link of links" (click)="redirectRoute(link.routerPath, link.name)"  [ngClass]="link.selected ? 'item_selected' : ''"> 
                 <span  [ngClass]="link.selected ? 'span_selected' : ''">{{ link.name }}</span>
             </div>
         </div>

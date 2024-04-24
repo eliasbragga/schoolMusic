@@ -30,10 +30,15 @@
       color: $item-menu-color;
       text-decoration: none;
       cursor: pointer;
+     
     }
 
     .space {
       width: 50%;
     }
   }
+}
+.item_selected {
+  border-bottom: 2.8px solid #E84A33;
+  border-radius: 2px;
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgClass, NgFor } from '@angular/common';
 import { ContextService } from '../../service/context.service';
+import { LinksMenu } from '../../interfaces/links-menu';
 
 @Component({
   selector: 'app-footer',
@@ -10,26 +11,25 @@ import { ContextService } from '../../service/context.service';
   imports: [NgFor, NgClass]
 })
 export class FooterComponent {
-  links = [
-    { name: 'Inicio', routePath: 'inicio', selected: true },
-    { name: 'Comece por aqui', routePath: 'comece-por-aqui', selected: false },
-    { name: 'Trilhas', routePath: 'trilhas', selected: false },
-    { name: 'Suporte', routePath: 'suporte', selected: false}
-  ];
+  links: Array<LinksMenu> = [];
 
   constructor(
     private contextService: ContextService
-  ) {}
-
-  selectLink(linkName: string) {
-    const indexLink = this.links.findIndex(link => link.name === linkName)
-    this.links.forEach(link => link.selected = false)
-    if(indexLink !== -1) this.links[indexLink].selected = true
+  ) {
+    contextService.$linksMenuList.subscribe((value) => {
+      this.links = value.slice()
+    })
+    this.removeItemSpace()
   }
 
-  redirectRoute(route: string, link: string) {
+  removeItemSpace() {
+    const index = this.links.findIndex(item => item.space === true)
+    if(index !== -1) this.links.splice(index, 1)
+    
+  }
+
+  redirectRoute(route?: string, linkName?: string) {
     this.contextService.redirectRoute(route)
-    this.selectLink(link)
+    this.contextService.selectLink(linkName)
   }
-
 }

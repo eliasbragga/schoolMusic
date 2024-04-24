@@ -6,16 +6,16 @@
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 
-    app-header {
+    .header {
         grid-row: 1;
         padding: 2% 3% 0px;
     }
 
-    router-outlet {
+    .router{
         grid-row: 2;
     }
 
-    app-footer {
+    .footer {
         grid-row: 3;
     }
 }

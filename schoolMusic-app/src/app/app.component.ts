@@ -16,6 +16,7 @@ export class AppComponent  implements OnInit {
     }
 
   ngOnInit(): void {
+    this.contextService.redirectRoute('inicio')
     this.loggedIn = sessionStorage.getItem("token")
   }
  

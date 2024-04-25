@@ -5,15 +5,15 @@
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+    padding: 2% 3% 0px;
+    gap: 3rem;
 
     .header {
         grid-row: 1;
-        padding: 2% 3% 0px;
     }
 
     .router{
         grid-row: 2;
-        padding: 2% 3% 0px;
     }
 
     .footer {

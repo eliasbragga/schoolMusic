@@ -28,8 +28,6 @@
     <h2>Cursos</h2>
     <hr>
     <div class="cards">
-        <app-card></app-card>
+        <app-card *ngFor="let image of images" [imageUrl]="image.url"></app-card>
     </div>
 </div>
-
-

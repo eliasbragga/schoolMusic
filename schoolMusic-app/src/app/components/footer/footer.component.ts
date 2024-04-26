@@ -28,8 +28,7 @@ export class FooterComponent {
     
   }
 
-  redirectRoute(route?: string, linkName?: string) {
+  redirectRoute(route?: string) {
     this.contextService.redirectRoute(route)
-    this.contextService.selectLink(linkName)
   }
 }

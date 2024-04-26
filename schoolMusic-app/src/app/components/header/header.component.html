@@ -5,7 +5,7 @@
   <ul class="links">
     <li *ngFor="let link of links" 
         [ngClass]="link.space ? 'space' : ''"
-        (click)="redirectRoute(link.routerPath, link.name)"
+        (click)="redirectRoute(link.routerPath)"
         >
         <span [ngClass]="link.selected ? 'item_selected' : ''">{{ link.name }}</span>
       

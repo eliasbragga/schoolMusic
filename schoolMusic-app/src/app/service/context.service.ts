@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
 import { Router } from '@angular/router';
 import usersData from '../../db/users';
-import { LinksMenu } from '../interfaces/links-menu';
 
 
 @Injectable({
@@ -25,11 +24,12 @@ export class ContextService {
   $tokenCtx = this.token.asObservable()
 
   constructor(
-    private router: Router
+    private router: Router,
   ) {}
 
   redirectRoute(rota?: string) {
     this.router.navigate([`${rota}`]);
+    this.selectLink(rota)
   }
 
   //TODO ajustar tipo de newArraysLinks
@@ -37,8 +37,8 @@ export class ContextService {
     this.linksMenuList.next(newArrayLinks)
   }
 
-  selectLink(linkName?: string) {
-    const indexLink = this.links.findIndex(link => link.name === linkName)
+  selectLink(routerPath?: string) {
+    const indexLink = this.links.findIndex(link => link.routerPath === routerPath)
     this.links.forEach(link => link.selected = false)
     if(indexLink !== -1) this.links[indexLink].selected = true
   }
@@ -79,6 +79,5 @@ export class ContextService {
     sessionStorage.setItem("token", token);
   }
 
-  changeTestCtx(value: string) {
-  }
+
 }

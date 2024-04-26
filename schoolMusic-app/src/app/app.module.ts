@@ -14,16 +14,18 @@ import { StartHereComponent } from './views/start-here/start-here.component';
 import { LearningPathsComponent } from './/views/learning-paths/learning-paths.component';
 import { SupportComponent } from './views/support/support.component';
 import { CardComponent } from './components/card/card.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     
+    
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     LoginComponent,
     ButtonComponent,
     RouterOutlet, 
@@ -38,6 +40,7 @@ import { CardComponent } from './components/card/card.component';
     LearningPathsComponent,
     SupportComponent,
     CardComponent,
+    HttpClientModule
   ],  
   providers: [],
   bootstrap: [AppComponent]

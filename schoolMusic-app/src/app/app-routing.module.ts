@@ -5,11 +5,10 @@ import { HomeComponent } from './views/home/home.component';
 import { StartHereComponent } from './views/start-here/start-here.component';
 import { LearningPathsComponent } from './views/learning-paths/learning-paths.component';
 import { SupportComponent } from './views/support/support.component';
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'inicio', component: HomeComponent },
+  { path: 'login', component: LoginComponent, data:[{name: 'teste'}] },
+  { path: 'inicio', component: HomeComponent, data:[{name: 'teste'}] },
   { path: 'comece-por-aqui', component: StartHereComponent },
   { path: 'trilhas', component: LearningPathsComponent },
   { path: 'suporte', component: SupportComponent },

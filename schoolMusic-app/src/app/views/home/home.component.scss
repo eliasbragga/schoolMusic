@@ -26,7 +26,7 @@
         flex-direction: column;
 
         h2 {
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             padding: 0 1.7rem 1rem 1.7rem;
             color: $item-menu-color;
         }
@@ -34,16 +34,39 @@
         .content {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
 
             .active {
                 background-color: #E84A33;
-                color: black;
+
+                h2 {
+                    font-size: 1.3rem;
+                    padding: 0;
+                    font-weight: 400;
+                    color: black;
+                }
+
+                hr {
+                    width: 100%;
+                    border-color: #292929;
+                }
             }
 
             .off {
                 background-color: $card-home-box;
                 color: $item-menu-color;
+
+
+                h2 {
+                    font-size: 1.3rem;
+                    padding: 0;
+                    font-weight: 400;
+                    color: $item-menu-color;
+                }
+
+                hr {
+                    width: 100%;
+                    background: $item-menu-color;
+                }
             }
 
             .box {
@@ -55,19 +78,6 @@
                 border-radius: 5px;
             }
 
-            h2 {
-                font-size: 1.3rem;
-                padding: 0;
-                font-weight: 400;
-            }
-
-            hr {
-                border: 0;
-                height: 1px;
-                width: 100%;
-                background-color: $item-menu-color;
-            }
-
             .fa-solid {
                 font-size: 2rem;
                 margin-left: 0.5rem;
@@ -75,27 +85,24 @@
             }
 
         }
-
-        .content,
-        .box {
-            display: flex;
-        }
     }
 }
 
 .courses {
-    margin: 5rem 0  ;
+    margin: 5rem 0;
 
-    h2 {
-        font-size: 2rem;
-        padding: 0 1.7rem 1rem 0 ;
-        color: $item-menu-color;
+    i {
+        color: #868686;
+        font-weight: bold;
+        text-shadow: 1px 2px 1px black;
     }
 
     hr {
-        width: 20%;
-        margin-bottom: 3rem;
+        width: 400px;
+        border-color: #868686;
+        margin: 1rem 0 2rem 0;
     }
+
     .cards {
         width: 100%;
         display: flex;

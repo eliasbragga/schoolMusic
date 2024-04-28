@@ -1,0 +1,14 @@
+@import '../../../styles.scss';
+
+i {
+    font-size: 1.6rem;
+    color: $item-menu-color;
+}
+
+.courses {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+}

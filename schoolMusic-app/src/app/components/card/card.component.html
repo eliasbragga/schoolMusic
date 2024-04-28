@@ -1,6 +1,6 @@
-<div class="card_container" (click)="redirectRoute()">
+<div class="card_container"  (click)="redirectRoute()" [class]="{'small-card': small}">
     <div class="content" >
         <img [src]="imageUrl" alt="">
     </div>
-    <button>Ver Curso</button>
+    <button>{{title}}</button>
 </div>

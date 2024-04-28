@@ -14,6 +14,7 @@ import { StartHereComponent } from './views/start-here/start-here.component';
 import { LearningPathsComponent } from './/views/learning-paths/learning-paths.component';
 import { SupportComponent } from './views/support/support.component';
 import { CardComponent } from './components/card/card.component';
+import { CarouselComponent } from './views/learning-paths/components/carousel/carousel.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
@@ -40,6 +41,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LearningPathsComponent,
     SupportComponent,
     CardComponent,
+    CarouselComponent,
     HttpClientModule
   ],  
   providers: [],

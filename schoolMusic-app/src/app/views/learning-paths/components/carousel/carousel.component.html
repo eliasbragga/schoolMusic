@@ -1,1 +1,7 @@
-<p>carousel works!</p>
+<div class="carousel-container" id="carousel">
+  <div class="carousel">
+    <div class="slide" *ngFor="let image of images">
+      <img [src]="image" alt="Slide Image">
+    </div>
+  </div>
+</div>

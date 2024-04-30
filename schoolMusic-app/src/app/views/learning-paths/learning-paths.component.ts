@@ -18,4 +18,9 @@ export class LearningPathsComponent {
     { url: '../../../assets/piano.png' },
     { url: '../../../assets/violao.jpg' }
   ];
+  items = [
+    { image: 'https://via.placeholder.com/150' },
+    { image: 'https://via.placeholder.com/150' },
+    { image: 'https://via.placeholder.com/150' },
+    ];
 }

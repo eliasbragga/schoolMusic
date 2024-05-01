@@ -1,11 +1,30 @@
-.carousel-container {
+.carousel {
     display: flex;
-    width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100vw;
 
-    .carousel {
-        display: flex;
-        gap: 5rem;
-        
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+
+    .slide {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        width: calc((100vw - 20rem) / 3);
+        transition: transform 0.5s;
+        position: relative;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; 
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
     }
 }

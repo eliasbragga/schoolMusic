@@ -1,12 +1,13 @@
 <div class="trails">
     <i>Selecione seu curso</i>
     <div class="courses">
-        <app-card title="Ver trilha" *ngFor="let image of images" [imageUrl]="image.url" [small]="small"></app-card>
+      <app-card title="Ver trilha" *ngFor="let image of images" [imageUrl]="image.url" [small]="small" (click)="updateText(image.name)"></app-card>
     </div>
     <i>Trilhas</i>
     <hr>
-    <h2>Violão</h2>
-    <div class="carosel_content">
-        <app-carousel></app-carousel>
+    <h2>{{ text }}</h2>
+    <div class="carousel_content">
+      <app-carousel></app-carousel>
     </div>
-</div>
+  </div>
+  

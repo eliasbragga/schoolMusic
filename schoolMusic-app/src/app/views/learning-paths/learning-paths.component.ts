@@ -3,6 +3,10 @@ import { CardComponent } from '../../components/card/card.component';
 import { NgFor } from '@angular/common';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
+interface Instrument {
+  url: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-learning-paths',
@@ -13,14 +17,14 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 })
 export class LearningPathsComponent {
   protected small = true;
-  images = [
-    { url: '../../../assets/bateria.png' },
-    { url: '../../../assets/piano.png' },
-    { url: '../../../assets/violao.jpg' }
+  images: Instrument[] = [
+    { url: '../../../assets/bateria.png', name: 'Bateria' },
+    { url: '../../../assets/piano.png', name: 'Piano' },
+    { url: '../../../assets/violao.jpg', name: 'Violão' }
   ];
-  items = [
-    { image: 'https://via.placeholder.com/150' },
-    { image: 'https://via.placeholder.com/150' },
-    { image: 'https://via.placeholder.com/150' },
-    ];
+  text = this.images.length > 0 ? this.images[0].name : 'Selecione um curso'; // Define o texto inicial como o nome da primeira imagem, se houver alguma imagem na lista
+
+  updateText(name: string) {
+    this.text = name;
+  }
 }

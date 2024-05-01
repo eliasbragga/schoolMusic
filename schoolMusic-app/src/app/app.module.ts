@@ -42,7 +42,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     SupportComponent,
     CardComponent,
     CarouselComponent,
-    HttpClientModule
+    HttpClientModule,
   ],  
   providers: [],
   bootstrap: [AppComponent]
